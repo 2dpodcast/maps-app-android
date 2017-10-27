@@ -32,32 +32,35 @@ here are some tips for creating a helpful report that will make fixing it much e
 
 ## Contributing Code
 ### System Requirements
-System requirements of the Android SDK are provided [here](https://developers.arcgis.com/en/android/system-reqs.html).  Below are the basic developer requirements to workign with ArcGIS Runtime SDK For Android in Eclipse: 
+System requirements of the Android SDK are provided [here](https://developers.arcgis.com/en/android/system-reqs.html).  Below are the basic developer requirements to working with ArcGIS Runtime SDK For Android in Eclipse: 
 
- * [JDK 6](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
- * [Eclipse 3.7](http://www.eclipse.org/downloads/) (Indigo) or greater
- * Eclipse [JDT](http://www.eclipse.org/jdt/) plugin (Included in most Eclipse IDE packages)
- * Eclipse [EGit](http://www.eclipse.org/egit/) plugin (Included in Ecilpse 4.x and greater)
- * Android [ADT Plugin](http://developer.android.com/tools/sdk/eclipse-adt.html)
- * [ArcGIS Runtime SDK for Android](https://developers.arcgis.com/en/android/)
+* [JDK 6 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [ADT Bundle](http://developer.android.com/sdk/index.html) **or** [Eclipse 4.2 +](https://www.eclipse.org/downloads/) with [ADT Plugin](http://developer.android.com/tools/sdk/eclipse-adt.html)
+* [ArcGIS Runtime SDK for Android](https://developers.arcgis.com/android/)
 
 ### Setting up your dev environment
-Install and setup your Eclipse developer environment [here](https://developers.arcgis.com/en/android/install.html).Once installed you can work with the project directly 
+Install and setup your Eclipse developer environment [here](https://developers.arcgis.com/android/guide/install-and-set-up.htm). Once installed you can work with the project directly 
 
 #### Fork the repo
 If you haven't already, got to https://github.com/Esri/maps-app-android and click the [Fork](https://github.com/Esri/maps-app-android/fork) button.
 
 #### Clone the repo
-Open your terminal, navigate to your working folder of choice, and use ```git clone``` to get a copy of the repo you just forked.
+#### Eclipse
+1. [Clone the Maps App Android project in Eclipse](http://wiki.eclipse.org/EGit/User_Guide#Cloning_Remote_Repositories)
+2. [Import the project](http://wiki.eclipse.org/EGit/User_Guide#Project_Import) into Eclipse
 
+  ![Import](https://raw.githubusercontent.com/Esri/maps-app-android/master/import-project.png)
 
-```
-$ git clone https://github.com/username/maps-app-android.git
-# Clones your fork of the repository into the current directory in terminal
-```
+3. Right Click the imported project and select **Convert to ArcGIS Android Project**
+
+  ![Convert Project](https://raw.githubusercontent.com/Esri/maps-app-android/master/convert-to-arcgis-project.png)
+
+#### Command line Git
+1. [Clone the Maps App Android](https://help.github.com/articles/fork-a-repo#step-2-clone-your-fork)
+2. ```cd``` into the ```maps-app-android``` folder
+
 #### Configure remotes
 Move into the directory the cloning process just created (should be maps-app-android), then make sure your local git knows about all the remotes and branches.
-
 ```
 $ cd maps-app-android
 # Changes the active directory in the prompt to the newly cloned "maps-app-android" directory
@@ -75,4 +78,4 @@ $ git fetch upstream
  * Inspect the Import Projects dialog to ensure your project is selected and click **Finish**
  * Change perspectives to **Java**
  * Right click the project **ArcGIS Tools > Convert to ArcGIS Project**
- * You can now work with the project as you would normally.
+ * Make your changes and create a [pull request](https://help.github.com/articles/creating-a-pull-request)
